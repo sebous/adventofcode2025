@@ -36,7 +36,6 @@ pub fn part_two(input: &str) -> Option<u64> {
     let ranges = parse(input);
     let mut total = 0;
     for (min, max) in ranges {
-        dbg!(max - min);
         for id_num in min..=max {
             let id_str = id_num.to_string();
             'chunk_iter: for chunk_size in 1..=id_str.len() / 2 {
